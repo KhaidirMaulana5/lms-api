@@ -10,6 +10,13 @@ class Member extends Model
     use HasFactory;
 
     protected $table = 'members';
+    
+        protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'role',
+    ];
 
     public function transaction(){
         return $this->hasMany(Transaction::class);
