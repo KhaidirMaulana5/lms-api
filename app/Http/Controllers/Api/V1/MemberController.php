@@ -29,14 +29,10 @@ class MemberController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'author' => 'required',
-            'stock' => 'required',
-            'current_stock' => 'required',
-            'publisher' => 'required',
-            'pub_year' => 'required',
-            'pages' => 'required',
-            'isbn' => 'nullable'
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'role' => 'required',
         ]);
 
         return Member::create($request->all());
